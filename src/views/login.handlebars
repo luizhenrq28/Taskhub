@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/front/indexlogin.js" defer></script>
+</head>
+
+<body>
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-center" style="height: 90vh;">
+        <h1 class="fw-bold">LOGIN</h1>
+        <section id="campoinfo" class="pt-2 pb-2">
+                {{#if msgErro}}
+                    <div class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3 w-100 mensagem">
+                        {{msgErro}}
+                    </div>
+                {{/if}}
+            </section>
+        <form action="/login" method="post" class="p-3 rounded bg-light" style="border: 1px solid rgb(164, 164, 164);">
+            
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="email" id="form2Example1" class="form-control" name="email" />
+                <label class="form-label fw-bold" for="form2Example1">Email <i class="bi bi-envelope-at"></i></label>
+
+            </div>
+
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="password" id="form2Example2" class="form-control" name="senha" />
+                <label class="form-label fw-bold" for="form2Example2">Senha <i class="bi bi-lock"></i></label>
+
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+
+            {{!-- implementar o lembre de mim e esqueci minha senha --}}
+            <div class="row mb-4">
+                <div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                        <label class="form-check-label" for="form2Example34">Lembre de mim</label>
+                        <p>(emDesenvolvimento)</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <a href="/emDesenvolvimento" class="text-control">Esqueci minha senha!</a>
+                </div>
+            </div>
+            {{!-- implementar o lembre de mim e esqueci minha senha --}}
+
+            <!-- Submit button -->
+            <div class="d-flex justify-content-center">
+                <button data-mdb-ripple-init type="submit" class="btn btn-outline-dark mb-4">Logar</button>
+            </div>
+
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Não tem conta? <a href="/registrar">Registre-se</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

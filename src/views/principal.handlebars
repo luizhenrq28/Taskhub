@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="d-flex flex-column justify-content-between" style="height: 100vh;">
+    <nav class="navbar navbar-expand-lg d-flex navbar-light bg-light px-md-5">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand col-3 ps-lg-2" href="/principal">
+                <span style="font-size: 25px;font-weight: 500;">Task</span><span class="bg-dark text-light p-1 rounded"
+                    style="font-weight: 500;">hub</span>
+            </a>
+
+            <div class="pt-2 fs-3 pe-lg-5" style="margin-right: 30px;">
+                <div>Olá, {{nome}}</div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column align-items-end justify-content-center">
+
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-header">
+                    Acesse agora:
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="/tarefas" class="text-decoration-none">Tarefas</a></li>
+                    <li class="list-group-item"><a href="/perfil" class="text-decoration-none">Perfil</a></li>
+                    <li class="list-group-item"><a href="/sair" class="text-decoration-none">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center bg-body-tertiary text-muted" style="margin-top: 20px;">
+        <section class="d-flex flex-column justify-content-center justify-content-lg-between p-2 border-bottom ">
+            <div>
+                <span>Entre em contato </span>
+            </div>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            <div>
+                <a href="https://www.linkedin.com/in/luiz-henrique-78a207230/" class="me-4 text-reset"
+                    target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/luizhenrq28" class="me-4 text-reset" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://www.instagram.com/luizhenrq28/" class="me-4 text-reset" target="_top"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

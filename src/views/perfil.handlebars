@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/front/indexperfil.js" defer></script>
+</head>
+
+<body>
+    <section class="vh-100" style="background-color: #f4f5f7;">
+        <div class="container  h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-lg-6 mb-4 mb-lg-0">
+                    <div class="card mb-3" style="border-radius: .5rem;">
+                        <div class="row g-0">
+                            <div class="col-md-4 gradient-custom text-center text-dark pb-3 pb-sm-0"
+                                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img src="img/person-circle.svg" alt="Avatar" class="img-fluid my-5"
+                                    style="width: 80px;" />
+                                <h5 class="text-light">{{dados.nome}}</h5>
+                                <span><i class="bi bi-pencil-square text-light" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal1"></i></span>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-4">
+                                    <h6>Informações</h6>
+                                    <section id="campoMensagem" class="pb-2">
+                                    </section>
+                                    <hr class="mt-0 mb-4">
+                                    <div class="row pt-1">
+                                        <div class="col-12 mb-3">
+                                            <h6>Email</h6>
+                                            <p class="text-muted">{{dados.email}}</p>
+                                        </div>
+
+                                        <div class="col-12 mb-3">
+                                            <h6>ID</h6>
+                                            <p class="text-muted">{{dados.id}}</p>
+                                        </div>
+
+                                        <div class="col-12 mb-3">
+                                            <h6>Senha</h6>
+                                            <p class="text-muted">•••••••••••</p>
+                                        </div>
+                                    </div>
+                                    <h6>Alterar Dados</h6>
+                                    <hr class="mt-0 mb-4">
+                                    <div class="row pt-1">
+                                        <div class="col-3 mb-3 me-3">
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal1">
+                                                Dados
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Alterar Dados
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form action="/editarDadosPessoais" method="post"
+                                                                id="formularioSuspenso">
+                                                                <label for="inputnome">Nome</label>
+                                                                <input id="inputnome" class="form-control w-75"
+                                                                    type="text" name="nome" placeholder="nome"
+                                                                    value="{{dados.nome}}">
+                                                                <br><br>
+                                                                <label for="inputemail">Email</label>
+                                                                <input id="inputemail" class="form-control w-75"
+                                                                    type="text" name="email" placeholder="email"
+                                                                    value="{{dados.email}}">
+                                                                <br><br>
+                                                                <button class="btn btn-secondary">enviar</button>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer p-3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-3 mb-3">
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal2">
+                                                Senha
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Alterar Senha
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form action="/alterarSenha" id="formAlterarSenha"
+                                                                method="post">
+                                                                <label for="inputsenha">Senha Atual</label>
+                                                                <input id="inputsenha" class="form-control w-75" type="text"
+                                                                    name="senhaAtual" placeholder="senha atual"><br><br>
+
+                                                                <label for="novasenha">Nova Senha</label>
+                                                                <input id="novasenha" class="form-control w-75" type="password"
+                                                                    name="novaSenha" placeholder="nova senha"><br><br>
+
+                                                                <label for="repitanovasenha">Repita nova senha</label>
+                                                                <input id="repitanovasenha" class="form-control w-75" type="password"
+                                                                    name="novaSenhaRepetida"
+                                                                    placeholder="repita a senha"><br><br>
+                                                                <button class="btn btn-secondary">enviar</button>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer p-3">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <a href='/principal'> <i class="bi bi-arrow-left"></i> voltar para Principal</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

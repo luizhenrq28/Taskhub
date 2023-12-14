@@ -1,0 +1,29 @@
+html {
+    height: 100%;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgb(0, 0, 0), rgb(175, 175, 175));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgb(0, 0, 0), rgb(175, 175, 175))
+    }
+
+@media (min-width: 768px) {
+    /* classes custom sao as que se ajustam de maneira personalizada */
+    .custom-img {
+        max-width: 500px;
+        width: 100%;
+        height: auto;
+    }
+
+    .custom-btn {
+        max-width:280px;
+        width: 200px;
+        height: auto;
+    }
+}

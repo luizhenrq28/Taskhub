@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoList</title>
+    <script src="/front/indexhome.js" defer></script>
+</head>
+
+<body>
+    <div class="container d-flex flex-column align-items-center justify-content-center text-center pt-md-2 pt-lg-0 pt-xl-5" style="height: 100%;">
+        <h1 class="fw-bold" style="font-size: 45px;">Escreva, planeje, organize-se.<br>Bem-vindo ao TaskHub!</h1>
+        <p style="font-weight: 600; font-size:20px;">Organize suas tarefas de maneira eficiente e nunca perca um prazo
+            novamente.</p>
+        <p class="bg-dark text-light p-2 rounded mt-lg-3" style="max-width: 300;">Crie sua conta agora abaixo <i
+                class="bi bi-arrow-down"></i></i></p>
+        <img src="/img/Checklist-rafiki.png" alt="" class="img-fluid custom-img">
+
+        <section id="campoinfo" class="pb-2">
+            {{#if msg}}
+            <div
+                class="p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3 w-100 mensagem">
+                {{msg}}
+            </div>
+            {{/if}}
+        </section>
+        <hr class="d-flex flex-row w-75" style="border: 1px solid #212529;">
+
+        <div class="d-flex p-2 conteiner w-50 justify-content-center mb-2">
+            <a href="/login" class="btn btn-dark col-7 p-1 custom-btn me-3">Login</a>
+            <a href="/registrar" class="btn btn-outline-dark col-7 p-1 custom-btn ms-3">Registrar</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let input = document.querySelector('input');
+            input.focus();
+        });
+    </script>
+
+</head>
+
+<body class="d-flex flex-column justify-content-between" style="height: 100vh;">
+
+    {{!-- sessao cadastrar nova tarefa --}}
+    <section class="container mt-4">
+        <form action="/cadastratarefa" method="post" class="p-0 p-sm-4">
+            <h1>Cadastre<br>uma nova tarefa</h1>
+            <br>
+            <input type="text" name="tarefa"
+                style="border: none;max-width: 532px; border-bottom: 1px solid #212529; outline: none; width: 60%"
+                placeholder="Digite aqui"></input>
+            <br><br>
+            <button type="submit" class="btn btn-outline-dark" style="width:40%;max-width: 259px;">Enviar</button>
+        </form>
+
+        {{!-- lista de tarefas cadastradas --}}
+        <section class="list-group list-group-flush mt-5">
+            <h2>Tarefas</h2>
+            <ul class="list-group list-group-flush">
+                {{#each tarefa}}
+                <li class="list-group-item d-flex justify-content-between ps-md-5" style="max-height: 41px;"><span
+                        style="text-start word-wrap: break-word; max-height: 24px; overflow-y:auto; max-width: 80%;">{{tarefa}}</span>
+                    <div class="text-end"> <a href="/editar/{{id}}" class="pe-3"><i
+                                class="bi bi-pencil-square"></i></a><a href="/deletar/{{id}}"><i
+                                class="bi bi-trash3"></i></a></div>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+    </section>
+
+    <footer class="text-center bg-body-tertiary text-muted" style="margin-top: 20px;">
+        <section class="d-flex flex-column justify-content-center justify-content-lg-between p-2 border-bottom ">
+            <a href='/principal'> <i class="bi bi-arrow-left"></i> voltar para Principal</a>
+        </section>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        </div>
+    </footer>
+</body>
+
+</html>
