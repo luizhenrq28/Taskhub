@@ -34,9 +34,10 @@ Este projeto está passível de alterações, melhorias e implementação de nov
 ## Instalação
 
 - Abra o Terminal (ou Git Bash no Windows):
-   - Abra o terminal no seu sistema operacional.
-   - Navegue até o Diretório desejado
-   - copie o comando: git clone https://github.com/luizhenrq28/todo-list-app.git
+   - Abra o terminal no seu sistema operacional
+   - Navegue até o **repositorio git** desejado na sua máquina
+   - copie o comando: git clone https://github.com/luizhenrq28/Taskhub.git
+   - Navegue para a pasta taskhub
 - Instale as dependências:
    - digite o comando npm install
 
