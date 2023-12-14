@@ -26,7 +26,8 @@ Este projeto está passível de alterações, melhorias e implementação de nov
 
 ## Capturas de Tela ou Demonstração
 
- ! [teste] (http://url/to/img.png)
+<img src="https://github.com/luizhenrq28/Taskhub/blob/main/static/img/imagens/Captura%20de%20tela%202023-12-13.png" alt="estrutura do banco de dados" width="400px">
+ 
 
 ## Instalação
 
