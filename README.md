@@ -39,7 +39,8 @@ Este projeto está passível de alterações, melhorias e implementação de nov
    - copie o comando: git clone https://github.com/luizhenrq28/Taskhub.git
    - Navegue para a pasta taskhub
 - Instale as dependências:
-   - digite o comando npm install
+   - Digite o comando npm install
+   - Digite npm run dev para subir o servidor
 
 ## Uso
 **Caso deseja rodar esse Projeto na sua máquina será necessário:**
@@ -48,4 +49,5 @@ Este projeto está passível de alterações, melhorias e implementação de nov
     - SECRET= secret do jwt
     - DB_HOST= host do banco
     - DB_USER= user do banco
+    - DB_DATABASE= nome do banco
     - DB_PASSWORD= senha do banco
