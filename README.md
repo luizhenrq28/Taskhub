@@ -27,7 +27,9 @@ Este projeto está passível de alterações, melhorias e implementação de nov
 ## Capturas de Tela ou Demonstração
 
 <img src="https://github.com/luizhenrq28/Taskhub/blob/main/static/img/imagens/Captura%20de%20tela%202023-12-13.png" alt="estrutura do banco de dados" width="400px">
- 
+<img src="https://github.com/luizhenrq28/Taskhub/blob/main/static/img/imagens/Captura%20de%20tela%202023-12-14%20111140.png" alt="tela home mobile" width="400px">
+<img src="https://github.com/luizhenrq28/Taskhub/blob/main/static/img/imagens/Captura%20de%20tela%202023-12-14%20111240.png" alt="tela home desktop" width="400px">
+<img src="https://github.com/luizhenrq28/Taskhub/blob/main/static/img/imagens/Captura%20de%20tela%202023-12-14%20111427.png" alt="tela principal mobile" width="400px">
 
 ## Instalação
 
