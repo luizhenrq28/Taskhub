@@ -43,6 +43,11 @@ let verificarToken = (req, res, next) => {
 let obterNome = function (req) {
     return req.headers.cookie.split('; ').find((e) => e.startsWith('username')).split('=')[1].split('%20')[0]
 }
+
+let obterNomeCompleto = function (req) {
+    return req.headers.cookie.split('; ').find((e) => e.startsWith('username')).split('=')[1].split('%20').join(' ')
+}
+
 let obterID = (req) => {
     let token = req.headers.cookie.split('; ').find((e) => e.startsWith('token')).split('=')[1]
     let userId = jwt.decode(token).userid
@@ -235,7 +240,7 @@ module.exports = {
     },
 
     renderEditar: (req, res) => {
-        let username = obterNome(req)
+        let username = obterNomeCompleto(req)
         let id = req.params.id
 
         sql.execute('select tarefas.id, tarefas.tarefa from tarefas inner join cadastros on cadastros.id = tarefas.id_usuario where cadastros.nome = ?', [username], (err, result) => {
@@ -281,5 +286,3 @@ module.exports = {
     obterToken: obterToken,
     verificarToken: verificarToken
 }
-
-
